@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Kigo’s | Villafranca de los Caballeros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rojo-kigos: #B31B1B;
+            --negro-kigos: #1a1a1a;
+            --blanco-fondo: #f9f9f9;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--blanco-fondo);
+            color: var(--negro-kigos);
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            background-color: var(--negro-kigos);
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* --- HERO (CABECERA) --- */
+       .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('media/comida2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 60vh; /* Bajamos de 80 a 60 para que no ocupe toda la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem; /* ¡Más grande el nombre! */
+            margin: 0;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0 30px;
+        }
+
+        .btn-contacto {
+            background-color: var(--rojo-kigos);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* --- SECCIÓN CARTA --- */
+        .seccion { 
+            padding: 60px 20px; 
+            max-width: 1200px; /* Subimos de 1000 a 1200 para que use más ancho de pantalla */
+            margin: auto; 
+}
+        
+        h2.titulo-seccion {
+            text-align: center;
+            color: var(--rojo-kigos);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--rojo-kigos);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .grid-carta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .categoria-menu {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .categoria-menu h3 {
+            color: var(--rojo-kigos);
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .item-menu {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+
+        /* --- IMÁGENES DESTACADAS --- */
+        .img-destacada {
+            width: 100%;
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* --- FOOTER / CONTACTO --- */
+        footer {
+            background-color: var(--negro-kigos);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<a href="https://wa.me/34639729550?text=Hola,%20quería%20reservar%20una%20mesa" 
+   style="position:fixed; width:60px; height:60px; bottom:40px; right:40px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:30px; box-shadow: 2px 2px 3px #999; z-index:1000;" 
+   target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width:100%; padding:10px;" alt="WhatsApp">
+</a>
+<body>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#carta">La Carta</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <h1>Bar Kigo’s</h1>
+        <p>Tradición y sabor en Villafranca de los Caballeros</p>
+        <a href="tel:639729550" class="btn-contacto">LLAMAR PARA RESERVAR</a>
+    </section>
+
+    <section class="seccion" id="carta">
+        <h2 class="titulo-seccion">Nuestra Carta</h2>
+
+        <img src="media/comida2.jpg" alt="Plato tradicional Kigos" class="img-destacada">
+        <div class="grid-carta">
+            <div class="categoria-menu">
+                <h3>Hamburguesas Gourmet</h3>
+                <div class="item-menu"><span>Burger Cheese</span> <span>12,00€</span></div>
+                <div class="item-menu"><span>Burger Truffatta</span> <span>12,00€</span></div>
+                <div class="item-menu"><span>Burger Pollo Crujiente</span> <span>8,00€</span></div>
+            </div>
+
+            <div class="categoria-menu">
+                <h3>Para Compartir</h3>
+                <div class="item-menu"><span>Gachas Manchegas (min. 2 pers)</span> <span>9,00€/r</span></div>
+                <div class="item-menu"><span>Torrezno de Soria con puré</span> <span>15,00€</span></div>
+                <div class="item-menu"><span>Croquetas</span> <span>12,00€</span></div>
+                <div class="item-menu"><span>Patatas Bravas</span> <span>11,00€</span></div>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <img src="media/comida1.jpg" alt="Hamburguesas Gourmet Kigos" class="img-destacada">
+            </div>
+
+        <div class="grid-carta">
+            <div class="categoria-menu">
+                <h3>Arroces (Por encargo)</h3>
+                <div class="item-menu"><span>Paella Mixta</span> <span>14,00€/r</span></div>
+                <div class="item-menu"><span>Arroz con Bogavante</span> <span>20,00€/r</span></div>
+                <div class="item-menu"><span>Paella de marisco</span> <span>14,00€/r</span></div>
+                <div class="item-menu"><span>Arroz con pollo y verduras</span> <span>12,00€/r</span></div>
+
+            </div>
+
+            <div class="categoria-menu">
+                <h3>Montados y Molletes</h3>
+                <div class="item-menu"><span>Especial Kigo's</span> <span>7,00€</span></div>
+                <div class="item-menu"><span>Serranito</span> <span>6,00€</span></div>
+                <div class="item-menu"><span>Bacon y queso</span> <span>5,00€</span></div>
+                <div class="item-menu"><span>Pollo a la plancha y mayonesa</span> <span>5,00€</span></div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <h2>Visítanos</h2>
+        <p>📍 Avenida de Castilla-La Mancha, 1<br>Villafranca de los Caballeros, Toledo</p>
+        <p>⏰ Abierto para desayunos desde las 06:00 AM</p>
+        <p>📞 Teléfono: 639 729 550</p>
+        
+        <div class="social-icons">
+            <a href="https://www.instagram.com/kigosbar/">Instagram</a>
+            <a href="https://www.facebook.com/people/Kigos/61580850422241/">Facebook</a>
+        </div>
+        <br>
+        <p style="font-size: 0.8rem; opacity: 0.6;">&copy; 2024 Bar Kigo’s - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
